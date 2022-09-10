@@ -1,0 +1,6 @@
+link, link_name, link_description ve link_category değiştirilebilir olarak yazılmalı. 
+link eklemeden kategori açılabilmeli
+linkler kolaylıkla listelenip paylaşılabilir olmalı
+
+kategori tablosu ayrıca yapılmalı
+link tablosu tek olabilir

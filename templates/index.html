@@ -6,30 +6,24 @@
 
 {% block body %}
 <div class="content">
-     <h1 style="text-align: center">İş Takip Edelim</h1>
-    {% if tasks|length < 1 %}
-    <h4 style="text-align: center"> Henüz bir şey yok. Acil iş alman lazım! Paraaaa!!!!! </h4>
+     <h1 style="text-align: center">Link Takip Edelim!</h1>
+    {% if categories|length < 1 %}
+    <h4 style="text-align: center"> Henüz bir şey yok. Linkleri Biriktirmeye Başlayalım! Paraaaa!!!!! </h4>
     {% else %}
      <table>
-        <tr>
-            <th>Dosya No</th>
-            <th>İş</th>    
-            <th>Eklenme Tarihi</th>
-            <th>Ne Zamana?</th>
-            <th>Actions</th>
-        </tr>
-        {% for task in tasks %}
-            <tr>
-                <td>{{ task.case_number }}</td>
+        <th>
+            <tr>Kategori</tr>
+            <tr>Link</tr>    
+            <tr>Link Adı<tr>
+            <tr>Link Açıklaması<tr>
+        </th>
+        {% for category in categories %}
+            <th>
+                <td>{{ category.category }}</td>
                 <td>{{ task.content }}</td>
                 <td>{{ task.date_created.date() }}</td>
                 <td>{{ task.date_deadline }}</td>
-                <td>
-                    <a href="/delete/{{task.id}}">Sil</a>
-                    <br>
-                    <a href="/update/{{task.id}}">Güncelle</a>
-                </td>
-            </tr>
+            </th>
         {% endfor %}    
      </table>
     {% endif %}  
